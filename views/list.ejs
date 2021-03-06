@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo list</title>
+    <link rel="stylesheet" href="CSS\styles.css" />
+  </head>
+
+  <body>
+    <div class="box" id="heading">
+      <h1>It is a <%= KindofDay %> !</h1>
+    </div>
+
+    <div class="box">
+      <% for (var index = 0; index < NewItem.length; index++) { %>
+      <div class="item">
+        <input type="checkbox" />
+        <p><%= NewItem[index] %></p>
+      </div>
+      <% } %>
+
+      <form class="item" action="/" method="post">
+        <input type="text" name="fname" placeholder="New Item" autocomplete="off" />
+        <button type="submit">+</button>
+      </form>
+    </div>
+  </body>
+</html>
